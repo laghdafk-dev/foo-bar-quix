@@ -1,0 +1,21 @@
+<div class="container">
+    <form [formGroup]="inputNumberForm" (ngSubmit)="submitNumber()" novalidate>
+        <p>
+            <label for="inputNumber">Number to convert</label>
+            <br/>
+            <input type="input" id="inputNumber" name="inputNumber" formControlName="inputNumber"
+                placeholder="inputNumber">
+        </p>
+        <div class="formInvalid" *ngIf="!inputNumber?.valid && (inputNumber.dirty ||inputNumber.touched)">
+            <p [hidden]="!inputNumber.errors.required">
+                Input number is required
+            </p>
+            <p [hidden]="!inputNumber.errors.pattern">
+                Input number should only contain numeric values
+            </p>
+        </div>
+        <p>
+            <button type="submit" [disabled]="!inputNumberForm.valid" [@openClose]="inputNumberForm.valid ? true : false">Convert</button>
+        </p>
+    </form>
+</div>

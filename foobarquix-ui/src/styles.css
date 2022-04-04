@@ -1,0 +1,25 @@
+/* You can add global styles to this file, and also import other style files */
+body {
+    padding-top: 70px;
+    padding-bottom: 30px;
+  }
+  .navbar-brand {
+    height: 60px;
+    padding-top: 5px;
+  }
+  button {
+    color: #fff;
+    border-radius: 4px;
+    width: 10%;
+  }
+  input {
+    width: 100%;
+  }
+
+  li.list-group-item.grey-element {
+    background-color: hsl(210,8%,95%);
+  }
+  .formInvalid {
+    color: red;
+    font-size: smaller;
+  }
